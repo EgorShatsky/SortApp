@@ -15,6 +15,8 @@ def delete_header_row(df):
 def get_sentences(df, index):
     original_dialogs = df[index].tolist()
     original_dialogs = list(map(lambda d: str(d), original_dialogs))
+    original_dialogs = set(original_dialogs)
+    original_dialogs = list(original_dialogs)
 
     sentences = []
 
